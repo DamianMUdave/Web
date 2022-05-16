@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sensor</title>
+        <link rel="shortcut icon" href="./images/komi.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/estilos.css" class="css">
+    </head>
+    <body>
+        <header class="hero">
+            <nav class="nav_container">
+                <div class="nav_logo">
+                    <h1 class="title">SENSOR DE TEMPERATURA Y HUMEDAD</h1>
+                </div>
+            </nav>
+
+            <section class="info" id="app">
+                <div class="info_container">
+                    <img src="./images/time.svg" alt="" class="icon">
+                    <h2 class="subtitle">Actualización</h2>
+                    <h3 class="paragraph">{{actualizacion}}</h3>
+                </div>
+                <div class="info_container">
+                    <img src="./images/fire.svg" alt="" class="icon">
+                    <h2 class="subtitle">Temperatura</h2>
+                    <h3 class="paragraph">{{temperatura}}</h3>
+                </div>
+                <div class="info_container">
+                    <img src="./images/gota.svg" alt="" class="icon">
+                    <h2 class="subtitle">Humedad</h2>
+                    <h3 class="paragraph">{{humedad}}</h3>
+                </div>
+            </section>
+            <figure class="image">
+                <img src="./images/nah pito.jpg" alt="" class="image_img">
+            </figure>
+        </header>
+        <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <script>
+            const app = new Vue({
+                el: '#app',
+                data: {
+                    actualizacion: '10/10/10',
+                    temperatura: '20ºC',
+                    humedad: 100
+
+                }
+            })
+        </script>
+    </body>
+</html>
